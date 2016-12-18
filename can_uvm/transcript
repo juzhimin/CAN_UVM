@@ -1,0 +1,36 @@
+# //  ModelSim SE 10.2c Jul 18 2013 
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do new_run.do 
+# D:/juzhimin/software/modelsim/setup/uvm-1.1d/win32
+# D:/juzhimin/software/modelsim/setup/verilog_src/uvm-1.1d
+# C:/Users/Administrator/Desktop/can_uvm/core_code
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling interface can_interface
+# -- Compiling package top_tb_sv_unit
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling interface can_interface
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# vsim -ldflags -lregex -c -novopt -sv_lib D:/juzhimin/software/modelsim/setup/uvm-1.1d/win32/uvm_dpi work.top_tb 
+# Refreshing C:/Users/Administrator/Desktop/can_uvm/work.top_tb
+# Refreshing C:/Users/Administrator/Desktop/can_uvm/work.top_tb_sv_unit
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.top_tb_sv_unit
+# Loading work.top_tb
+# Refreshing C:/Users/Administrator/Desktop/can_uvm/work.can_interface
+# Loading work.can_interface
+# Loading mtiUvm.questa_uvm_pkg
+# Loading D:/juzhimin/software/modelsim/setup/uvm-1.1d/win32/uvm_dpi.dll

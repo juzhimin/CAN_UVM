@@ -1,0 +1,52 @@
+# Current time Mon Oct 24 22:02:47 2016
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.2c"
+# Version = "2013.07"
+# Date = "Jul 18 2013"
+# Platform = win32
+# 0    0x0066076f: '<unknown (@0x66076f)>'
+# 1    0x00660f04: '<unknown (@0x660f04)>'
+# 2    0x0066021a: '<unknown (@0x66021a)>'
+# 3    0x00521475: '<unknown (@0x521475)>'
+# 4    0x00a9026c: '<unknown (@0xa9026c)>'
+# 5    0x004011c5: '<unknown (@0x4011c5)>'
+# 6    0x004f4e52: '<unknown (@0x4f4e52)>'
+# 7    0x004f9ba6: '<unknown (@0x4f9ba6)>'
+# 8    0x004f9c41: '<unknown (@0x4f9c41)>'
+# 9    0x004f9c68: '<unknown (@0x4f9c68)>'
+# 10   0x006ef473: '<unknown (@0x6ef473)>'
+# 11   0x007c8153: '<unknown (@0x7c8153)>'
+# 12   0x77c60aed: 'RtlReleasePrivilege + 0x114' in 'c:\windows\system32\ntdll.dll'
+# 13   0x77c6fa18: 'RtlGetGroupSecurityDescriptor + 0x30c' in 'c:\windows\system32\ntdll.dll'
+# 14   0x77c6f91d: 'RtlGetGroupSecurityDescriptor + 0x211' in 'c:\windows\system32\ntdll.dll'
+# 15   0x77c96b57: 'KiUserExceptionDispatcher + 0xf' in 'c:\windows\system32\ntdll.dll'
+# 16   0x00660f04: '<unknown (@0x660f04)>'
+# 17   0x0066021a: '<unknown (@0x66021a)>'
+# 18   0x00521475: '<unknown (@0x521475)>'
+# 19   0x00a9026c: '<unknown (@0xa9026c)>'
+# 20   0x004011c5: '<unknown (@0x4011c5)>'
+# 21   0x004f4e52: '<unknown (@0x4f4e52)>'
+# 22   0x004f9ba6: '<unknown (@0x4f9ba6)>'
+# 23   0x004f9c41: '<unknown (@0x4f9c41)>'
+# 24   0x004f9c68: '<unknown (@0x4f9c68)>'
+# 25   0x00487555: '<unknown (@0x487555)>'
+# 26   0x0078ff96: '<unknown (@0x78ff96)>'
+# 27   0x007868b2: '<unknown (@0x7868b2)>'
+# 28   0x004a409c: '<unknown (@0x4a409c)>'
+# 29   0x004a5021: '<unknown (@0x4a5021)>'
+# 30   0x7f0066cb: 'D:/juzhimin/software/modelsim/setup/win32/../verilog_src/questa_uvm_pkg-1.2/src/questa-configdb.svh:103'
+# 31   0x7f007999: 'D:/juzhimin/software/modelsim/setup/win32/../verilog_src/questa_uvm_pkg-1.2/src/questa-configdb.svh:181'
+# 32   0x7f007c9e: 'D:/juzhimin/software/modelsim/setup/win32/../verilog_src/questa_uvm_pkg-1.2/src/questa-configdb.svh:172'
+# 33   0x0051f516: '<unknown (@0x51f516)>'
+# 34   0x0048f667: '<unknown (@0x48f667)>'
+# 35   0x0099239f: '<unknown (@0x99239f)>'
+# 36   0x1000e054: 'Tcl_ListMathFuncs + 0x444' in 'd:\juzhimin\software\modelsim\setup\win32\tcl85.dll'
+# 37   0x1000ecba: 'Tcl_EvalEx + 0x7da' in 'd:\juzhimin\software\modelsim\setup\win32\tcl85.dll'
+# 38   0x1000e500: 'Tcl_EvalEx + 0x20' in 'd:\juzhimin\software\modelsim\setup\win32\tcl85.dll'
+# 39   0x00aaae39: '<unknown (@0xaaae39)>'
+# 40   0x1005fb86: 'Tcl_NotifyChannel + 0x136' in 'd:\juzhimin\software\modelsim\setup\win32\tcl85.dll'
+# 41   0x100aab09: 'TclpHasSockets + 0x379' in 'd:\juzhimin\software\modelsim\setup\win32\tcl85.dll'
+# End of Stack Trace
+
+

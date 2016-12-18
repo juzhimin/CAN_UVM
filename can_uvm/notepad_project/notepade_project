@@ -1,0 +1,23 @@
+<NotepadPlus>
+    <Project name="can_uvm">
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_bus_if.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_bus_monitor.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_bus_transaction.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_driver.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_driver.sv.bak" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_interface.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_interface.sv.bak" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_monitor.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_monitor.sv.bak" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_reference_model.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_reg_model.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_transaction.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_transaction.v" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\my_transaction.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\top_tb.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\top_tb.sv.bak" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_bus_driver.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_bus_agent.sv" />
+        <File name="C:\Users\Administrator\Desktop\can_uvm\core_code\can_my_adapter.sv" />
+    </Project>
+</NotepadPlus>

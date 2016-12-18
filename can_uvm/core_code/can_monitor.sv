@@ -1,0 +1,88 @@
+// * ----------------------------------------------------
+// * Author:juzhimin
+// * Email:919373122@qq.com
+// * Filename:can_tansaction.sv
+// * Description:can   monitor   
+// *监控总线上的数据，根据当前状态确定总线是读还是写。
+// *写的话还要读发送和接受的数据发寄存器模型进行出错处理。
+// *读的话直接读取发送上面的数据发寄存器模型即可。 
+// * Version:2016/10/7/v1.0
+// *----------------------------------------------------
+`ifndef     CAN_MONITOR__SV
+`define 	CAN_MONITOR__SV
+
+class can_monitor extends uvm_monitor;
+  
+  virtual can_interface vif;                //实例化一个接口
+  bit status;                           //当前状态0位读1位写 从参考模型获得
+   int  T;                            //数据周期，根据波特率不同而不同。
+   uvm_analysis_port #(can_transaction)  ap; 
+   uvm_analysis_port #(can_transaction)  rm_port; 
+  `uvm_component_utils(can_monitor)         //factory机制进行注册
+   
+  function new(string name = "can_monitor",uvm_component  parent =null );   //构造函数 类的名称和父类
+    super.new(name,parent);
+  endfunction
+
+
+  virtual function void build_phase(uvm_phase phase);
+       super.build_phase(phase);
+       if(!uvm_config_db#(virtual can_interface)::get(this,"","vif",vif));    //接受来自testcase的interface
+       //uvm_config_db的参数为 传递参数的类型 
+       //set和get的第三个参数必须一样 get的参数为 1.父指针， 第二个参数为路径索引 ???
+      `uvm_fatal("can_monitor","virtual interface must be set for vif ")
+       if(!uvm_config_db#(int)::get(this,"","T","T"));
+		`uvm_fatal("can_moniotr","cannot get T")
+  endfunction
+  
+  extern task main_phase(uvm_phase phase);
+  extern task collect_one_pkt(can_transaction tr);      //收集一个数据包
+endclass
+
+  task can_monitor::main_phase(uvm_phase phase);
+     can_transaction tr_t;
+	 can_transaction tr_r;
+	 while(1) 
+	         begin 
+	         tr_r=new("tr_r");
+			     collect_one_pkt(tr_t,tr_r);
+				 ap.write(tr_t);       //发送给scoreboard和reference model 
+				 rm_port.write(tr_r);
+			     end 
+     
+  endtask
+ 
+task  can_monitor::collect_one_pkt(can_transaction T_tr,can_transaction R_tr);  //collect 解析数据可以得到帧格式以及帧类型
+      bit data_q_t[$];          //接收队列
+	  bit data_q_r[$];
+	  int count;
+ 	  while(1)            //接受一帧标准帧的数据 必须先判断总线是空闲的
+	     begin
+		  @(negedge vif.RX0);   //帧开始   
+		  #(T/2);             //等待帧起始结束
+		  while(1)
+		  begin
+		  #T;               //接受第一个数据
+		  data_q_t.push_front(vif.TX0);  //将发送上的数据压入队列   因为数据发送的时候接受线上也
+		  data_q_r.push_front(vif.RX0);  //将接受上的数据压入队列  有数据需要进行比对进行出错处理
+           if(vif.RX0)    //每接收一次数据加一，用来判断帧结尾 先考虑最简单的情况即格式为标准数据帧
+              count=count+1;
+           else count=0;
+		   if(count==7)
+		   break;
+		  end
+		  for(int i=0;i<11;i++)   //直接从接收队列中解析数据    
+             begin
+			 
+		  tr.ID={tr.ID[31:0],data_q_r.pop_back()};
+		     end
+		  //出错处理 解析出数据并进行出错处理 然后发sc 因为是在处理后发sc所以可以收完再检测
+		  
+	    end
+      
+endtask
+
+
+
+
+`endif
